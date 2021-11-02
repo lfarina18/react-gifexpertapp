@@ -9,6 +9,8 @@ export const useFetchGifs = (category) => {
         loading: true
     });
 
+    // Solo se ejecuta cuando es renderizado por primera vez si está [] vacio.
+
     useEffect(() => {
 
         getGifs(category)

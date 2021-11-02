@@ -6,7 +6,6 @@ import { GifGridItem } from './GifGridItem';
 export const GifGrid = ({ category }) => {
     const { data: images, loading } = useFetchGifs(category);
 
-    // Solo se ejecuta cuando es renderizado por primera vez si está [] vacio.
 
     return (
         <>
