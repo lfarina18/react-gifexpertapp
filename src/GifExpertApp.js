@@ -3,7 +3,6 @@ import { AddCategory } from './components/AddCategory';
 import { GifGrid } from './components/GifGrid';
 
 export const GifExpertApp = ({ defaultCategories = [] }) => {
-
     // const categories = ['One Punch', 'Samuraí X', 'Dragon Ball']
     const [categories, setCategories] = useState(defaultCategories);
 
@@ -17,6 +16,7 @@ export const GifExpertApp = ({ defaultCategories = [] }) => {
         <>
             <h2>GifExpertApp</h2>
             <AddCategory setCategories={setCategories} />
+            {/* Mando la referencia a setCategories */}
             <hr />
 
             <ol>
@@ -25,16 +25,11 @@ export const GifExpertApp = ({ defaultCategories = [] }) => {
                     //     return <li key={category}> {category} </li>
                     //     /* el key no puede ser el indice y tiene que ser único */
                     // })
-                    categories.map(category => (
-                        <GifGrid
-                            key={category}
-                            category={category} />
+                    categories.map((category) => (
+                        <GifGrid key={category} category={category} />
                     ))
                 }
             </ol>
-
-
         </>
     );
-}
-
+};
